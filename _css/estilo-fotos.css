@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+ul#album-fotos {
+    width: 700px;
+    margin: 0px auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+}
+
+ul#album-fotos li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 5px solid white;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    -webkit-transition: all .3s ease-in;/*quantos efeitos você vai monitorar / quanto tempo / forma do efeito(nesse caso o que foi utilizado vai afzer com
+    que ele cresça de forma suave(ease-in)*/
+}
+/* A QUESTÃO DO WEBKIT ACHO QUE JÁ FOI DEFASADA, DEPOIS DAR UMA VERIFICADA*/
+
+ul#album-fotos li:hover { /*com esse ao invés de somente mostrar a foto, ele vai dar o zomm total*/
+    -webkit-transform: scale(1.5);
+}
+
+/*colocando fotos utilizando CSS*/
+
+ul#album-fotos li span {
+    opacity: 0;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(0, 0, 0, .3);
+    font-size: 9pt;
+    line-height: 370px; /*vai fazer com que a legenda desça*/
+    padding: 5px;
+} /* é pra isso que se usa o span(e outros)*/
+
+ul#album-fotos li:hover span {/*quando eu passar o mouse por cima vai aparecer o li*/
+    opacity: 1; 
+}
+
+ul#album-fotos li#foto01 {
+    background: url('../_imagens/galeria-01.jpg') no-repeat;
+    background-position: 50% 50%;/*lateral vertical (vai alterar a posição da imagem somente dentro do objeto*/
+    background-size: 400px 400px ;/*tamanhoo da imagem de fundo(esse é o tamanho original da minha imagem)*/
+    background-color: white;
+}
+
+ul#album-fotos li#foto01:hover {/*EFEITO DE ZOOM /hover(quando eu passar o mouse sobre)*/
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto02 {
+    background: url('../_imagens/galeria-02.jpg') no-repeat;
+    background-position: 50% 50%;/*lateral vertical (vai alterar a posição da imagem somente dentro do objeto*/
+    background-size: 400px 400px ;/*tamanhoo da imagem de fundo(esse é o tamanho original da minha imagem)*/
+    background-color: white;
+}
+
+ul#album-fotos li#foto02:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto03 {
+    background: url('../_imagens/galeria-03.jpg') no-repeat;
+    background-position: 50% 50%;/*lateral vertical (vai alterar a posição da imagem somente dentro do objeto*/
+    background-size: 400px 400px ;/*tamanhoo da imagem de fundo(esse é o tamanho original da minha imagem)*/
+    background-color: white;
+}
+
+ul#album-fotos li#foto03:hover {
+    background-position: 0x 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto04 {
+    background: url('../_imagens/galeria-04.jpg') no-repeat;
+    background-position: 50% 50%;/*lateral vertical (vai alterar a posição da imagem somente dentro do objeto)
+    como vai ser colocado zoom é importante localizar bem no meio da imagem como foi feito */
+    background-size: 400px 400px ;/*tamanhoo da imagem de fundo(esse é o tamanho original da minha imagem)*/
+    background-color: white;
+}
+
+ul#album-fotos li#foto04:hover {
+    background-position: 0x 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto05 {
+    background: url('../_imagens/galeria-05.jpg') no-repeat;
+    background-position: 50% 50%;/*lateral vertical (vai alterar a posição da imagem somente dentro do objeto*/
+    background-size: 400px 400px ;/*tamanhoo da imagem de fundo(esse é o tamanho original da minha imagem)*/
+    background-color: white;
+}
+
+ul#album-fotos li#foto05:hover {
+    background-position: 0x 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto06 {
+    background: url('../_imagens/galeria-06.jpg') no-repeat;
+    background-position: 50% 50%;/*lateral vertical (vai alterar a posição da imagem somente dentro do objeto*/
+    background-size: 400px 400px ;/*tamanhoo da imagem de fundo(esse é o tamanho original da minha imagem)*/
+    background-color: white;
+}
+
+ul#album-fotos li#foto06:hover {
+    background-position: 0x 0px;
+    background-size: 200px 200px;
+}

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+
+iframe#frame-spec {
+    width: 400px;
+    height: 280px;
+    border: none;
+    overflow: hidden; /*para remover a visualização do contéudo*/
+}
+
+/*iframe#frame-spec::-webkit-scrollbar {
+	display: none;
+}
+
+
+NAO SEI PRA QUE ISSO KSKSKS*/

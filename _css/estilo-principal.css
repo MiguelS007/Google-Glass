@@ -1,0 +1,256 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);/*pego do google fonts*/
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf")
+}
+body{
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+    font-family: Arial, sans-serif;
+}
+
+div#interface {
+    width: 900px; /*largura*/
+    background-color: #ffffff;
+    margin: -20px auto 10px auto; /*nesta ordem: margin: cima diretita baixo esquerda (auto é para o navegador fazer automaticamente
+    nesse caso a direita e esquerda do site vão ser auto*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,.5);
+    padding: 10px; /*cima direita baixo esquerda, no caso como todos os lados eram 10px basta que se coloque apenas uma vez*/
+}
+
+p {
+    text-align: justify; /*alinhamento do texto*/
+    text-indent: 50px; /*identação*/
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 780px;
+    top: 70px;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /*largura da borda primeiro depois cor da borda e o formato(solid, dashed, inset, outset, dotted, double)*/
+    /*nas bordas temos o border-bottom: ;(borda de baixo), border-left: ;(esquerda), border-right: ;(direita), border-top: ;(de cima)*/
+    height: 150px; /*altura*/
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px ; /*no-repeat para não repetir depois deslocamento lateral e depois vertical*/
+}
+
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt; /*tamanho da fonte*/
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0,.6); /*deslocamento  deslocamento vertical  espalhamento   color*/ 
+    padding: 0px;
+    margin-bottom: 0px;/*margem de baixo*/
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;/*pego do google fonts*/
+    color: #888888;
+    font-size: 13pt;
+    padding: 0px;
+    margin-top: 0px;/*margem de cima*/
+}
+
+/* Formatação de imagens com legendas */
+
+figure.foto-legenda  /*para chamar o arquivo colocasse a referência.classe */
+{   
+    position: relative; /* ou seja tudo que for referente a esse figure vai estar numa posição relativa ele usando a figura como referência */
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black; 
+}/*borda: 8px tipodeborda cor
+para se criar sombras se coloca box-shadow: vertical horizontal espalhamento cor;
+*/
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0; /* vai esconder a legenda*/
+    position: absolute;
+    top: 0px;
+    background-color: rgb(0, 0, 0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s; /* uma transição para o parâmetro que eu quero a transição no tempo determinado, ou seja vai levar 1 seg para 
+    exibir ou esconder o conteúdo*/
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+} /* o hover vai disparar uma classe específica, uma formatação específica quando você passar o mouse por cima do objeto que no caso
+é o figcaption, então quando eu passar o mouse por cima eu terei uma opacidade de 1 que é 100% /*
+
+/*Formatação do Menu*/
+
+nav#menu {
+    display: block; /* tem que se fazer isso para poder fazerem os textos andarem*/
+}
+
+nav#menu ul{
+    list-style: none; /*para tirar os marcadores da lista*/
+    text-transform: uppercase; /*para transformar todos em maiúsculas no texto*/
+    position: absolute; /*se colocar posição relativa vai estar se referindo somente dentro do container, mas para se colocar absoluta 
+    você pode fazer flutuar pelo site inteiro, então colocando position absolute você pode definir o top e o left como a seguir: */
+    top: -20px;
+    left: 460px;
+}
+
+nav#menu li{
+    display: inline-block; /*vai fazer com que o bloco seja exibido na mesma linha*/
+    background-color: rgb(226, 225, 225);
+    padding: 10px; /* vai criar um espaço dentro do bloco, ou seja, entre o background e o texto(espaço dentro do objeto)*/
+    margin: 2px; /* espaço fora do objeto*/
+    transition: background-color 1s; /* vai monitorar e durar um segundo*/
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu h1{
+    display: none; /*para esconder o menu*/
+}
+
+nav#menu a {
+    color: black;
+    text-decoration: none; /*decoração do texto, esse eu fixa para tirar as listas*/
+}
+
+nav#menu a:hover{
+    color: white;
+    text-decoration: underline;/* vaiu fazer que quando eu passe o mouse apareça sublinhado*/
+}
+
+section#corpo {
+    display: block;
+    width: 500px;
+    float: left; /*eu vou fazer com minha section flutue pelo lado esquerdo e para usar o float
+    os objetos porecisam estar configurados como blocos*/
+    border-right: 1px solid #606060;/* largura tipo de linha cor da linha*/
+    padding-right: 15px;
+}
+
+article#noticia-pricipal h2 {
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0 px 10px 0px
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direta{
+    text-align: right;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
+}
+
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px; /*espaço entre as bordas*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+   /* vertical-align: bottom; baixo
+    vertical-align: top; cima
+    vertical-align: middle; centro */
+}
+
+table#tabelaspec td.ce {
+    color: white;
+    background-color: #606060;
+    vertical-align: top; /* a classe vai sobrepor o que foi definido para a tag principal*/
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+aside#lateral h1 {
+    font-weight:'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: white;
+    padding: 5px;
+}
+
+footer#rodape {
+    clear: both;/*isto é, limpe as configurações dos dois lados*/
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}

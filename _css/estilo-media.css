@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+div#tv-radio {
+    width: 900px;
+    height: 580px;
+    margin: auto;
+    background: url("../_imagens/radio-tv.png") no-repeat; /* no-repeat significa que mesmo que aja algum problema somente uma imagem será exibida*/
+}
+
+audio#musica {
+    display: block; /*para ele ser exibido como um bloco*/
+    position: relative;
+    left: 575px;
+    top: 488px;/*descer significa aumentar o top*/
+    width: 300px;
+}
+
+video#filme {
+    display: block;
+    position: relative;
+    left: 90px;/*chegar para esquerda significa diminuir o left*/
+    top: 70px;/*chegar pra cima significa diminuir o top*/
+    width: 440px;
+}
+
+/*COMO COLOCAR VÍDEOS DIRETAMENTE DO YOUTUBE PARA NÃO CONSUMIR MUITO ESPAÇO NA HORA DE HOSPEDAR UM SITE
+
+você vai no vídeo que quer e clica no vídeo
+vai em compartilhar
+pegar o incorporar e pega o código html que consta lá
+ctrl c + ctrl v
+porém se o youtub tirar o vídeo do ar não vai mais funcionar.
+*/
